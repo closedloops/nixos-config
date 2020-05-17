@@ -52,6 +52,11 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
+  services.longview = {
+    enable = true;
+    apiKeyFile = "/var/lib/longview/apiKeyFile";
+  };
+
   services.openssh = {
     enable = true;
     passwordAuthentication = false;
