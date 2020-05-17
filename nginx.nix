@@ -17,6 +17,11 @@ in
   services.nginx = {
     enable = true;
 
+    recommendedGzipSettings = true;
+    recommendedOptimisation = true;
+    recommendedProxySettings = true;
+    recommendedTlsSettings = true;
+
     virtualHosts."default" = {
       default = true;
       root = "/srv/www/default";
