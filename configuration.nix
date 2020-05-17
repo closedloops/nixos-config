@@ -55,6 +55,7 @@
 
   # List services that you want to enable:
   services.dbus.socketActivated = true;
+  services.nixosManual.showManual = true;
 
   services.longview = {
     enable = true;
