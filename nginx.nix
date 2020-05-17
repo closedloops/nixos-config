@@ -4,6 +4,11 @@
   services.nginx = {
     enable = true;
 
+    virtualHosts."default" = {
+      default = true;
+      root = "/srv/www/default";
+    };
+
     virtualHosts."alexbaumhoer.com" = {
       serverAliases = [ "www.alexbaumhoer.com" ];
       enableACME = true;
