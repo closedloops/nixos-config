@@ -70,10 +70,13 @@
 
   # Define a user account.
   security.sudo.wheelNeedsPassword = false;
+  users.mutableUsers = false;
+
+  users.groups = { web = {}; };
 
   users.users.abau = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "docker" "web" ];
     shell = pkgs.bashInteractive;
     openssh.authorizedKeys.keys = [
       "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjj37CtVDII+e1zWQYTGEvs4eNXHt2G8pTFfvlrQC0i/V1cAk5UtbXgbaBYFTGwzoacp8X+0uI9lIvd/pxbCoRmbVNOkZluBZpzYRjyDMmDlzcB9a6GirBI3v5yEbZImH42SDrxDr1MTnd3gzVYlNiibHBh7DhDsY0Z/CsmSaJJcEzJ58l7fFmlhQGwVmk9GHdUm3RJLu3/7d3IQ/SZoXy6eu7EY4J2Xmcm7Cpk5GsQhiVs/DlFj2XUGEWMm8ENaE+qT7LVpKAYGc1/m8DCyg2qhpzjPGtGugxWxUAVFIX+B+xMAfo+mBn54ar9iTiWENWj2YXGAX+gzl8GvBG2vReF8zGpdEQFVv9/JQXfJ9jfm9CRIpAmad+S9vtZ+i0rYVbqS49kp1U6GMqtXFVglNMudxBd3cgUVk/vATFu+G0ZXP6JwpLjD1Q2wO4KB2ct73p2qyjpplRHHrfA+kWLsSZZ1OYcu7cCTMk6bkAVNzl/t9U2nRG9XY7umY8J9RRllHiIS8cQmz00mC0pyvlyu9hOgwkooeP/eDfKdZocx8+IyVgDMn9Ojk7zAma52nK7hBL4wLhftle6zr7uxkpOmSRkp8WDZkuMVCucipl4f7Z/dgRGlYmyCDCY8EelAmt2gemd4TM7p6tHQmEiKLe1zng4SDbT6AILcWlKQ5MItYxww== alexbaumhoer@gmail.com"
@@ -84,7 +87,7 @@
 
   users.users.xtian = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "docker" "web" ];
     shell = pkgs.bashInteractive;
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILE/LhXpi1E1ggGKBfbgFUp3AIOFTrNrvkAYiJJ8cVuQ hi@xtian.us" ];
   };
