@@ -43,7 +43,6 @@
     bash
     docker
     git
-    nginx
     vim
     
     # Debug packages from Linode tutorial
