@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nginx.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -64,7 +65,7 @@
   };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
