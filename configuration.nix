@@ -68,7 +68,7 @@
   networking.firewall.allowedTCPPorts = [ 80 443 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account.
   security.sudo.wheelNeedsPassword = false;
 
   users.users.abau = {
