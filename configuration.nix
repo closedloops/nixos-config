@@ -68,6 +68,8 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  security.sudo.wheelNeedsPassword = false;
+
   users.users.abau = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
@@ -85,8 +87,6 @@
     shell = pkgs.bashInteractive;
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILE/LhXpi1E1ggGKBfbgFUp3AIOFTrNrvkAYiJJ8cVuQ hi@xtian.us" ];
   };
-
-  security.sudo.wheelNeedsPassword = false;
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
