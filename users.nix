@@ -21,6 +21,9 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "web" ];
     shell = pkgs.bashInteractive;
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILE/LhXpi1E1ggGKBfbgFUp3AIOFTrNrvkAYiJJ8cVuQ hi@xtian.us" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILE/LhXpi1E1ggGKBfbgFUp3AIOFTrNrvkAYiJJ8cVuQ hi@xtian.us"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHwXGPCcb6vBb+0F2nutFQsdvU5PyhKn8IeTCFElNIWS Christian Wesselhoeft (Dish)"
+    ];
   };
 }
